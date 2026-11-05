@@ -1,15 +1,21 @@
-
 <?php
+    // Este arquivo CONECTA com o banco de dados MySQL
+
     $servidor = "localhost";
     $usuario = "root";
     $senha = "";
     $bd = "empresa";
 
-    $result = mysqli_connect($servidor, $usuario, $senha, $bd);
+    // Chamar o comando para CONECTAR
+    $conexao = mysqli_connect($servidor, $usuario, $senha, $bd);
 
-    if (!$result) {
-        die("Erro ao conectar: " . mysqli_connect_error());
+    // Se a conexão falhar, mostrar o erro e parar
+    if ($conexao) {
+        //echo "Conexao realizada com sucesso";
+    }
+    else{
+        echo mysqli_error($conexao);
     }
 
-    // echo "Conexao realizada com sucesso";
+    
 ?>
